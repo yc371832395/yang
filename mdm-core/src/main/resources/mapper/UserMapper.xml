@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mdm.dao.UserMapper">
+	<resultMap id="BaseResultMap" type="com.mdm.entity.User">
+		<id column="id" property="userId" jdbcType="INTEGER" />
+		<result column="name" property="username" jdbcType="VARCHAR" />
+		<result column="pass" property="userpass" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="userlist" resultMap="BaseResultMap" parameterType="com.mdm.entity.User">
+		select id,name,pass from user
+	</select>
+
+	<insert id="insert" parameterType="com.mdm.entity.User">
+		insert into user (name,pass)
+		values (#{username,jdbcType=INTEGER}, #{userpass,jdbcType=VARCHAR} )
+	</insert>
+	
+	<select id="selectByUserId" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		id,name,pass from user
+		where id = #{userId,jdbcType=INTEGER}
+	</select>
+</mapper>
