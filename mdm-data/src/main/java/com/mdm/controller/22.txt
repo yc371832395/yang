@@ -1,0 +1,17 @@
+spring cloud
+spring boot
+个版本确认，已经每个版本之间的区别
+发布版本的区别   （注明文档）
+
+  
+部署开发环境：
+maven
+spring cloud+spring boot+redis+mybatis+swagger(是一款RESTFUL接口的文档在线自动生成+功能测试功能软件)
+
+
+
+ciu.joeng@outlook.com
+
+
+
+提醒：SAP 操作截图，客户主挡和销售订单的截图。
