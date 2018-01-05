@@ -1,4 +1,5 @@
-/test/
-/../mytest/
-
 /.settings/
+
+/../.settings/
+*project
+*classpath
